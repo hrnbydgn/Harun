@@ -115,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             . "            \$pdo = new PDO(\n"
             . "                'mysql:host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_NAME . ';charset=utf8mb4',\n"
             . "                DB_USER, DB_PASS,\n"
-            . "                [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci']\n"
+            . "                [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]\n"
             . "            );\n"
             . "        } catch (PDOException \$e) {\n"
             . "            die('<div style=\"font-family:sans-serif;padding:30px;color:#ff4444;\">Veritabanı bağlantı hatası: ' . \$e->getMessage() . '</div>');\n"
